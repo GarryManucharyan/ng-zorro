@@ -1,0 +1,54 @@
+<div class="all">
+    <h1>Ng-Zorro Form</h1>
+    <form nz-form [formGroup]="form">
+        <legend> Personal Details</legend>
+        <nz-form-label nzFor="Sal">Salutation</nz-form-label>
+        <nz-form-item>
+            <nz-select id="Sal" formControlName="salutation" nzPlaceHolder="select option" title="selectOption">
+                <nz-option nzValue="Nthng" nzLabel="Nthng" nzDisabled></nz-option>
+                <nz-option nzValue="Smthng" nzLabel="Smthng"></nz-option>
+                <nz-option nzValue="Smthng2" nzLabel="Smthng2"></nz-option>
+                <nz-option nzValue="Smthng3" nzLabel="Smthng3"></nz-option>
+            </nz-select>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label nzFor="firstName">First Name</nz-form-label>
+            <nz-form-control>
+                <input nz-input name="firstName" type="text" id="firstName" formControlName="firstName">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label nzFor="lastName">Last Name</nz-form-label>
+            <nz-form-control>
+                <input nz-input name="lastName" type="text" id="lastName" formControlName="lastName">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label class="gender-label" nzFor="gender">Gender</nz-form-label>
+            <nz-radio-group id="gender" formControlName="gender">
+                <label nz-radio nzValue="male">Male</label>
+                <label nz-radio nzValue="female">Female</label>
+            </nz-radio-group>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label nzFor="email">Email </nz-form-label>
+            <nz-form-control>
+                <input nz-input type="email" id="email" formControlName="email">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label nzFor="date">Date Of Birth</nz-form-label>
+            <nz-form-control>
+                <nz-date-picker [nzFormat]="'yyyy/MM/dd'" formControlName="dateOfBirth"></nz-date-picker>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-label nzFor="address">Adress</nz-form-label>
+        <nz-form-item>
+            <nz-form-control>
+                <textarea id="address" cols="40" rows="3" formControlName="address"></textarea>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item><button nz-button type="button" (click)="onSubmit()" [disabled]="form.invalid">Submit</button>
+        </nz-form-item>
+    </form>
+</div>

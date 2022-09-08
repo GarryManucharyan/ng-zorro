@@ -10,10 +10,14 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzFormModule } from 'ng-zorro-antd/form';
 
 import { AppComponent } from './app.component';
+import { FormComponent } from './components/form/form.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FormComponent,
+    TableComponent,
   ],
   imports: [
     BrowserAnimationsModule,
