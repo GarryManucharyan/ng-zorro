@@ -6,12 +6,14 @@ import { NgModule } from '@angular/core';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzFormModule } from 'ng-zorro-antd/form';
 
-import { AppComponent } from './app.component';
-import { FormComponent } from './components/form/form.component';
 import { TableComponent } from './components/table/table.component';
+import { FormComponent } from './components/form/form.component';
+import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { TableComponent } from './components/table/table.component';
     BrowserModule,
     FormsModule,
     NzDatePickerModule,
+    NzTableModule,
     NzButtonModule,
     NzSelectModule,
     NzRadioModule,
